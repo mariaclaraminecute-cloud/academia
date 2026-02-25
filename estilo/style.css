@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #22c55e;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #22c55e;
+}
+
+.btn-nav {
+    background: #22c55e;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://greenlifeacademias.com.br/wp/wp-content/uploads/2019/10/greenlife-parquelandia4-1920x600.jpg') center/cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    margin-top: 80px;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #22c55e;
+}
+
+.hero p {
+    margin: 20px 0 30px;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+.btn-primary {
+    background: #22c55e;
+    color: #000;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+
+.sobre {
+    padding: 120px 0;
+    background: #111827;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.sobre-text p {
+    margin-bottom: 30px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #22c55e;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+.sobre-img {
+    height: 350px;
+    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001ab?auto=format&fit=crop&w=1000&q=80') center/cover;
+    border-radius: 20px;
+}
+
+
+.planos {
+    padding: 120px 0;
+    background: #0f172a;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+}
+.cards {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+
+.card {
+    background: #1e293b;
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(34,197,94,0.1), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 20px 0;
+    color: #22c55e;
+}
+
+.contato {
+    padding: 100px 0;
+    background: #111827;
+    text-align: center;
+}
+
+.contato-box h2 {
+    margin-bottom: 20px;
+}
+
+.contato-box p {
+    color: #cbd5e1;
+    margin: 8px 0;
+}
+
+
+.footer {
+    background: #0b1120;
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+
+@media (max-width: 900px) {
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+
+
+
+.muscle-lines {
+    width: 100%;
+}
+
+.line {
+    height: 180px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    animation: moveBg 20s linear infinite;
+}
+
+
+.line::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.line h2 {
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes moveBg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 0;
+    }
+}
+
+
+
+.gluteos {
+    background-image: url('https://sportlife.com.br/wp-content/uploads/2023/08/Potencializar-os-treinos-de-gluteos-1.jpg');
+}
+
+.peito {
+    background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1600&q=80');
+}
+
+.costas {
+    background-image: url('https://media.istockphoto.com/id/1296197158/pt/foto/close-up-view-of-adult-brunette-woman-doing-exercise-with-barbell-in-gym.jpg?s=612x612&w=0&k=20&c=8LIDGsljYlDHsojuOc_a1ux4IgZ_asEtyaUhusDRzSE=');
+}
+
+.pernas {
+    background-image: url('https://sportlife.com.br/wp-content/uploads/2021/09/shutterstock_1019665669-1.jpg');
+}
+
+.trei a {
+       font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+
